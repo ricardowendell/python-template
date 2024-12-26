@@ -3,9 +3,18 @@
 install:
 	uv sync
 
-.PHONT: test
+.PHONY: test
 test:
 	pytest
+
+lint:
+	ruff check .
+
+format:
+	ruff check . --fix
+
+pre-commit:
+	pre-commit run --all-files
 
 ## Development setup
 .PHONY: setup
