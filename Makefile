@@ -3,6 +3,10 @@
 install:
 	uv sync
 
+.PHONT: test
+test:
+	pytest
+
 ## Development setup
 .PHONY: setup
 setup: install-uv install-pre-commit install

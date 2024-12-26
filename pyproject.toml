@@ -18,8 +18,13 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
+    "bandit>=1.8.0",
     "commitizen>=4.1.0",
+    "mypy>=1.14.0",
     "pre-commit>=4.0.1",
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.8.4",
 ]
 
 [tool.commitizen]
@@ -29,3 +34,12 @@ version_scheme = "pep440"
 version_provider = "pep621"
 update_changelog_on_bump = true
 major_version_zero = true
+
+[tool.ruff]
+lint.select = ["E", "F"]
+line-length = 88
+fix = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=src/ --cov-report=term-missing"
