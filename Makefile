@@ -1,3 +1,5 @@
+CMD=uv run
+
 ## Common tasks
 .PHONY: install
 install:
@@ -5,16 +7,16 @@ install:
 
 .PHONY: test
 test:
-	uv run pytest
+	$(CMD) pytest
 
 lint:
-	ruff check .
+	$(CMD) ruff check .
 
 format:
-	ruff check . --fix
+	$(CMD) ruff check . --fix
 
 pre-commit:
-	pre-commit run --all-files
+	$(CMD) pre-commit run --all-files
 
 ## Development setup
 .PHONY: setup
