@@ -5,7 +5,7 @@ install:
 
 .PHONY: test
 test:
-	pytest
+	uv run pytest
 
 lint:
 	ruff check .
