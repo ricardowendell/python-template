@@ -41,7 +41,7 @@ coverage:
 # Clean build/test artifacts
 clean:
     @echo "==> Cleaning build/test artifacts..."
-    rm -rf .pytest_cache coverage.xml dist build
+    rm -rf .pytest_cache .ruff_cache .venv logs __pycache__ .coverage coverage.xml dist build
     @echo "==> Clean complete."
 
 # Display list of commands
