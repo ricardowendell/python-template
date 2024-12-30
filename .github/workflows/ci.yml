@@ -3,19 +3,28 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  test:
+  integration:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y just
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
-      - name: Install dependencies
+          python-version: "3.12"
+
+      - name: Install UV and project dependencies
         run: |
           pip install uv
-          make install
+          just install
+
       - name: Run Linter
-        run: make lint
+        run: just lint
+
       - name: Run Tests
-        run: make test
+        run: just test

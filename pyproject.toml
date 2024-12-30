@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 authors = [
-    { name = "Ricardo Wendell", email = "rwendell@thoughtworks.com" }
+    { name = "Ricardo Wendell", email = "rickwendell@gmail.com" }
 ]
 requires-python = ">=3.12"
 dependencies = [
@@ -44,6 +44,6 @@ line-length = 88
 fix = true
 
 [tool.pytest.ini_options]
-pythonpath = ["src/python_template"]
+pythonpath = ["src"]
 testpaths = ["tests"]
 addopts = "--cov=src/ --cov-report=term-missing"
