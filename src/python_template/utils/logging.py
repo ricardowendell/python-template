@@ -7,11 +7,13 @@ from pathlib import Path
 
 def create_rich_console() -> Console:
     """Create a Rich console with a custom theme."""
-    custom_theme = Theme({
-        "info": "green",
-        "warning": "yellow",
-        "error": "bold red",
-    })
+    custom_theme = Theme(
+        {
+            "info": "green",
+            "warning": "yellow",
+            "error": "bold red",
+        }
+    )
     return Console(theme=custom_theme)
 
 
@@ -35,13 +37,7 @@ def configure_logger(log_path: str = "logs/python-template.log") -> None:
     )
 
     # Add rotating file handler
-    logger.add(
-        log_path,
-        rotation="1 MB",
-        retention=5,
-        backtrace=True,
-        diagnose=True
-    )
+    logger.add(log_path, rotation="1 MB", retention=5, backtrace=True, diagnose=True)
 
 
 console = create_rich_console()
