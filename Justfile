@@ -13,6 +13,10 @@ setup:
 
     @echo "==> Setup complete."
 
+# Create a new commit following Conventional Commits
+commit:
+    uv run cz commit
+
 # Install dependencies
 install:
     uv sync
