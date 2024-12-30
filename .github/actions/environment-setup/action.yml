@@ -11,7 +11,7 @@ runs:
   using: "composite"
   steps:
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ inputs.python_version }}
 
@@ -22,6 +22,4 @@ runs:
       run: |
         sudo apt-get update
         sudo apt-get install -y just
-
-    - name: Check out code
-      uses: actions/checkout@v3
+      shell: bash

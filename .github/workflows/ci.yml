@@ -6,8 +6,13 @@ jobs:
   integration:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
       - name: Run environment setup composite action
         uses: ./.github/actions/environment-setup
+        with:
+          python _version: "3.12"
 
       - name: Lint
         run: just lint
