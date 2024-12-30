@@ -28,7 +28,7 @@ This repository serves as a template for creating Python projects. The project l
 ### Setup Local Environment
 
 Run the following command to set up your local development environment:
-    ```bash
+   ```bash
     just setup
     ```
 
