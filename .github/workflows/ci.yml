@@ -4,11 +4,11 @@ on: [push, pull_request]
 
 jobs:
   integration:
-    uses: ./.github/workflows/environment-setup.yml
-    with:
-      python-version: '3.12
-
+    runs-on: ubuntu-latest
     steps:
+      - name: Run environment setup composite action
+        uses: ./.github/actions/environment-setup
+
       - name: Lint
         run: just lint
 
