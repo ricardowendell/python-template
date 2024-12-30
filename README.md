@@ -20,17 +20,11 @@ This repository serves as a template for creating Python projects. The project l
 ### Prerequisites
 
 1. Install [Homebrew](https://brew.sh/) if not already installed.
-2. Install `Just`:
-   ```bash
-   brew install just
-    ```
+2. Install [Just](https://github.com/casey/just): `brew install just`
 
 ### Setup Local Environment
 
-Run the following command to set up your local development environment:
-   ```bash
-    just setup
-    ```
+Run the following command to set up your local development environment: `just setup`
 
 ## Common Commands
 
