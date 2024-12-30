@@ -1,0 +1,30 @@
+name: environment-setup
+
+on:
+  workflow_call:
+    inputs:
+      python-version:
+        type: string
+        required: true
+        description: "Python version to use (e.g. 3.12)"
+
+jobs:
+  environment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y just
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ inputs.python-version }}
+
+      - name: Install uv for dependency management
+        run: |
+          pip install uv
