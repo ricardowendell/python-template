@@ -38,6 +38,10 @@ coverage:
     @echo "==> Generating coverage XML report..."
     uv run pytest --cov=src/python_template --cov-report=xml --cov-report=term-missing
 
+# Run pre-commit checks
+pre-commit:
+    uv run pre-commit run --all-files
+
 # Clean build/test artifacts
 clean:
     @echo "==> Cleaning build/test artifacts..."

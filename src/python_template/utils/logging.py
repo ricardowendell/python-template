@@ -16,7 +16,7 @@ def create_rich_console() -> Console:
 
 
 def configure_logger(log_path: str = "logs/python-template.log") -> None:
-    """Configure the Loguru logger with a console handler and a rotating file handler.
+    """Configure Loguru logger with a console handler and a rotating handler.
 
     Args:
         log_path (str): Path for the rotating log file.
