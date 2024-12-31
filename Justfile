@@ -1,5 +1,12 @@
 project_name := "python_template"
 
+
+alias c := commit
+alias t := test
+
+# Default command (runs all code checks)
+default : pre-commit
+
 # Setup local development environemtn
 setup:
     @echo "==> Installing system dependencies via Brewfile..."
@@ -35,15 +42,16 @@ format:
 # Run automated tests
 test:
     @echo "==> Running tests with pytest + coverage..."
-    uv run pytest --cov=src/python_template --cov-report=term-missing --cov-fail-under=80
+    uv run pytest --cov=src/{{project_name}} --cov-report=term-missing --cov-fail-under=80
 
 # Generate coverage report
 coverage:
     @echo "==> Generating coverage XML report..."
-    uv run pytest --cov=src/python_template --cov-report=xml --cov-report=term-missing
+    uv run pytest --cov=src/{{project_name}} --cov-report=xml --cov-report=term-missing
 
 # Run pre-commit checks
 pre-commit:
+    @echo "==> Running all code checks..."
     uv run pre-commit run --all-files
 
 # Clean build/test artifacts
