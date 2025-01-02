@@ -1,5 +1,6 @@
 import pytest
 from loguru import logger
+
 from python_template.utils.logging import configure_logger
 
 

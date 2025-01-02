@@ -9,8 +9,6 @@ repos:
         pass_filenames: false
         stages: [pre-commit]
 
-  - repo: local
-    hooks:
       - id: mypy
         name: run type-checking
         entry: just type-check

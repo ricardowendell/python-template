@@ -41,7 +41,7 @@ update_changelog_on_bump = true
 major_version_zero = true
 
 [tool.ruff]
-lint.select = ["E", "F", "W", "C", "B"]
+lint.select = ["E", "F", "W", "C", "B", "UP", "SIM", "I"]
 line-length = 88
 fix = true
 

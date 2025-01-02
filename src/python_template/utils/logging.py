@@ -1,8 +1,9 @@
-from loguru import logger
 import sys
+from pathlib import Path
+
+from loguru import logger
 from rich.console import Console
 from rich.theme import Theme
-from pathlib import Path
 
 
 def create_rich_console() -> Console:
