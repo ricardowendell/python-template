@@ -14,11 +14,11 @@ jobs:
         with:
           python _version: "3.12"
 
+      - name: Install project dependencies
+        run: just install
+
       - name: Lint
         run: just lint
 
       - name: Test
         run: just test
-
-      - name: Install project dependencies
-        run: just install

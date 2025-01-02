@@ -6,6 +6,7 @@ readme = "README.md"
 authors = [
     { name = "Ricardo Wendell", email = "rickwendell@gmail.com" }
 ]
+license = { file = "LICENSE" }
 requires-python = ">=3.12"
 dependencies = [
     "loguru>=0.7.3",
@@ -39,7 +40,7 @@ update_changelog_on_bump = true
 major_version_zero = true
 
 [tool.ruff]
-lint.select = ["E", "F"]
+lint.select = ["E", "F", "W", "C", "B"]
 line-length = 88
 fix = true
 

@@ -7,11 +7,8 @@ alias t := test
 # Default command (runs all code checks)
 default : pre-commit
 
-# Setup local development environemtn
+# Setup local development environment
 setup:
-    @echo "==> Installing system dependencies via Brewfile..."
-    brew bundle --file=Brewfile --no-lock
-
     @echo "==> Syncing environment with uv..."
     uv sync
 
@@ -22,6 +19,7 @@ setup:
 
 # Create a new commit following Conventional Commits
 commit:
+    @echo "==> Creating a new commit with Commitizen..."
     uv run cz commit
 
 # Install dependencies
@@ -31,12 +29,12 @@ install:
 
 # Run linter using Ruff
 lint:
-    @echo "==> Linting code with ruff..."
+    @echo "==> Linting code with Ruff..."
     uv run ruff check .
 
 # Format code using Ruff
 format:
-    @echo "==> Auto-formatting code with ruff..."
+    @echo "==> Auto-formatting code with Ruff..."
     uv run ruff check . --fix
 
 # Run automated tests
@@ -51,7 +49,7 @@ coverage:
 
 # Run pre-commit checks
 pre-commit:
-    @echo "==> Running all code checks..."
+    @echo "==> Running all code checks with pre-commit..."
     uv run pre-commit run --all-files
 
 # Clean build/test artifacts
@@ -62,4 +60,5 @@ clean:
 
 # Display list of commands
 help:
+    @echo "==> Available commands:"
     @just --list
