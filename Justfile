@@ -17,6 +17,10 @@ setup:
 
     @echo "==> Setup complete."
 
+# Runs Devbox shell for development
+dev:
+    devbox shell
+
 # Create a new commit following Conventional Commits
 commit:
     @echo "==> Creating a new commit with Commitizen..."

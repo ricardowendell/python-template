@@ -1,4 +1,11 @@
 {
   "python.analysis.extraPaths": ["src"],
-  "python.autoComplete.extraPaths": ["src"]
+  "python.autoComplete.extraPaths": ["src"],
+  "files.exclude": {
+    "**/.devbox": true,
+    "**/.git": true,
+    "**/.venv": true,
+    "**/.*_cache": true,
+    "**/__pycache__": true,
+  }
 }
