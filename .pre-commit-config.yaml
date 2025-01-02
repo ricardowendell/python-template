@@ -9,8 +9,18 @@ repos:
         pass_filenames: false
         stages: [pre-commit]
 
+  - repo: local
+    hooks:
+      - id: mypy
+        name: run type-checking
+        entry: just type-check
+        language: python
+        types: [python]
+        pass_filenames: false
+        stages: [pre-commit]
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
       - id: check-case-conflict
       - id: check-merge-conflict
@@ -20,7 +30,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.8.4
+    rev: v0.8.5
     hooks:
       - id: ruff
         args: [--exit-non-zero-on-fix]

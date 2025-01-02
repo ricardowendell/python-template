@@ -1,5 +1,5 @@
 from python_template.utils.logging import logger
 
 
-def main():
+def main() -> None:
     logger.info("Testing logs")

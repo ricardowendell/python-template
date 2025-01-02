@@ -52,6 +52,11 @@ coverage:
     uv run pytest --cov=src/{{project_name}} --cov-report=xml --cov-report=term-missing
 
 # Run pre-commit checks
+type-check:
+    @echo "==> Running type checking with mypy..."
+    uv run mypy src/{{project_name}}
+
+# Run pre-commit checks
 pre-commit:
     @echo "==> Running all code checks with pre-commit..."
     uv run pre-commit run --all-files
