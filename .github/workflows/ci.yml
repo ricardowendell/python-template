@@ -12,7 +12,7 @@ jobs:
       - name: Run environment setup composite action
         uses: ./.github/actions/environment-setup
         with:
-          python _version: "3.12"
+          python_version: "3.12"
 
       - name: Install project dependencies
         run: just install
