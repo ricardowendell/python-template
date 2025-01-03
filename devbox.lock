@@ -3,7 +3,17 @@
   "packages": {
     "act": {
       "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#act",
-      "source": "nixpkg"
+      "source": "nixpkg",
+      "systems": {
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "path": "/nix/store/dw4apw81jvlr88h5gnlay936lq1k2a18-act-0.2.52",
+              "default": true
+            }
+          ]
+        }
+      }
     },
     "just@latest": {
       "last_modified": "2024-12-23T21:10:33Z",
@@ -91,7 +101,17 @@
     },
     "pre-commit": {
       "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#pre-commit",
-      "source": "nixpkg"
+      "source": "nixpkg",
+      "systems": {
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "path": "/nix/store/yx4z400mypm0i8lz63wb6665jydjqk3l-pre-commit-3.3.3",
+              "default": true
+            }
+          ]
+        }
+      }
     },
     "python@3.12": {
       "last_modified": "2024-10-13T23:44:06Z",
