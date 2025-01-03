@@ -1,10 +1,10 @@
 {
-  "packages": ["python@3.12", "just@latest", "pre-commit", "act"],
-  "shell": {
-    "init_hook": [
-      "pip install --upgrade pip",
-      "pip install uv",
-      "just setup"
-    ]
+    "packages": ["python@3.12", "just@latest", "pre-commit", "act"],
+    "shell": {
+      "init_hook": [
+        "pip install --upgrade pip",
+        "pip install uv",
+        "just setup"
+      ]
+    }
   }
-}

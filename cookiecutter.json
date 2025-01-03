@@ -1,0 +1,11 @@
+{
+    "author": "Ricardo Wendell",
+    "email": "rickwendell@gmail.com",
+    "project_name": "example-project",
+    "project_slug": "{{cookiecutter.project_name|lower|replace('-', '_')}}",
+    "project_description": "This is a template repository for Python projects.",
+    "open_source_license": [
+        "MIT license",
+        "Not open source"
+    ]
+}

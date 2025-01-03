@@ -8,13 +8,11 @@ from rich.theme import Theme
 
 def create_rich_console() -> Console:
     """Create a Rich console with a custom theme."""
-    custom_theme = Theme(
-        {
-            "info": "green",
-            "warning": "yellow",
-            "error": "bold red",
-        }
-    )
+    custom_theme = Theme({
+        "info": "green",
+        "warning": "yellow",
+        "error": "bold red",
+    })
     return Console(theme=custom_theme)
 
 

@@ -1,7 +1,7 @@
 import pytest
 from loguru import logger
 
-from python_template.utils.logging import configure_logger
+from {{cookiecutter.project_slug}}.utils.logging import configure_logger
 
 
 def test_log_file_creation(tmp_path):
